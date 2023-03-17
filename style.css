@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Golos+Text:wght@500&display=swap");
+
+/* font-family: 'Golos Text', sans-serif; */
+
+body {
+  font-family: "Golos Text", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.kotak p {
+  margin: 0;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 10px;
+}
+
+.kotak input {
+  font-family: monospace;
+  max-width: 100%;
+  outline: none;
+  border: 1px solid #dadada;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f3f7fe;
+  transition: 0.3s;
+  color: #3b82f6;
+}
+
+.kotak input::placeholder {
+  color: #3b82f6;
+}
+
+.kotak input:focus {
+  border: 1px solid #3b82f6;
+  box-shadow: 0 0 0 5px #3b83f65f;
+}
+
+button {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  outline: none;
+  background-color: #4681f4;
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 5px;
+  transition: all ease 0.1s;
+  box-shadow: 0px 5px 0px 0px black;
+}
+
+button:active {
+  transform: translateY(5px);
+  box-shadow: 0px 0px 0px 0px #a29bfe;
+}
+
+.result {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 3px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  color: #3b82f6;
+  font-size: 20px;
+  height: 25px;
+
+  outline: none;
+  border: 1px solid #dadada;
+  border-radius: 5px;
+  background-color: #f3f7fe;
+  transition: 0.3s;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.kotak {
+  text-align: center;
+  border: 1px solid #3b82f6;
+  border-radius: 10px;
+  padding: 10px;
+  width: 512px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #f8fbfe;
+}
