@@ -1,111 +1,108 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Caesar Cipher</title>
-	<style>
-		body {
-			font-family: sans-serif;
-			margin: 0;
-			padding: 0;
-		}
+  <head>
+    <title>Caesar Cipher</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+      }
 
-		h1 {
-			margin-top: 0;
-			text-align: center;
-		}
+      h1 {
+        margin-top: 0;
+        text-align: center;
+      }
 
-		label {
-			display: block;
-			margin-top: 10px;
-		}
+      label {
+        display: block;
+        margin-top: 10px;
+      }
 
-		input {
-			padding: 5px;
-			border: 1px solid #ccc;
-			border-radius: 3px;
-			width: 100%;
-			box-sizing: border-box;
-		}
+      input {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        width: 100%;
+        box-sizing: border-box;
+      }
 
-		button {
-			margin-top: 10px;
-			padding: 5px 10px;
-			background-color: #4CAF50;
-			color: white;
-			border: none;
-			border-radius: 3px;
-			cursor: pointer;
-		}
+      button {
+        margin-top: 10px;
+        padding: 5px 10px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
 
-		button:hover {
-			background-color: #3e8e41;
-		}
+      button:hover {
+        background-color: #3e8e41;
+      }
 
-		.result {
-			margin-top: 10px;
-			padding: 10px;
-			border: 1px solid #ccc;
-			border-radius: 3px;
-			background-color: #f2f2f2;
-			word-wrap: break-word;
-			white-space: pre-wrap;
-		}
-	</style>
-</head>
-<body>
-	<h1>Caesar Cipher</h1>
+      .result {
+        margin-top: 10px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        background-color: #f2f2f2;
+        word-wrap: break-word;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Caesar Cipher</h1>
 
-	<label for="plain-text">Plain Text:</label>
-	<input type="text" id="plain-text">
+    <label for="plain-text">Plain Text:</label>
+    <input type="text" id="plain-text" />
 
-	<label for="shift">Shift:</label>
-	<input type="number" id="shift">
+    <label for="shift">Shift:</label>
+    <input type="number" id="shift" />
 
-	<button onclick="encrypt()">Encrypt</button>
-	<button onclick="decrypt()">Decrypt</button>
+    <button onclick="encrypt()">Encrypt</button>
+    <button onclick="decrypt()">Decrypt</button>
 
-	<div class="result" id="result"></div>
+    <div class="result" id="result"></div>
 
-	<a href="new.html" target="_blank">Coba metode lain</a>
+    <a href="new.html" target="_blank">Coba metode lain</a>
 
-	<script>
-		function encrypt() {
-			const plainText = document.getElementById('plain-text').value;
-			const shift = parseInt(document.getElementById('shift').value);
+    <script>
+      function shiftCharCode(char, shift) {
+        let charCode = char.charCodeAt(0);
+        if (charCode >= 65 && charCode <= 90) {
+          // uppercase letters
+          charCode = ((charCode - 65 + shift) % 26) + 65;
+        } else if (charCode >= 97 && charCode <= 122) {
+          // lowercase letters
+          charCode = ((charCode - 97 + shift) % 26) + 97;
+        }
+        return String.fromCharCode(charCode);
+      }
 
-			let result = '';
-			for (let i = 0; i < plainText.length; i++) {
-				let charCode = plainText.charCodeAt(i);
-				if (charCode >= 65 && charCode <= 90) { // uppercase letters
-					charCode = ((charCode - 65 + shift) % 26) + 65;
-				} else if (charCode >= 97 && charCode <= 122) { // lowercase letters
-					charCode = ((charCode - 97 + shift) % 26) + 97;
-				}
-				result += String.fromCharCode(charCode);
-			}
+      function encrypt() {
+        const plainText = document.getElementById("plain-text").value;
+        const shift = parseInt(document.getElementById("shift").value);
 
-			document.getElementById('result').textContent = result;
-		}
+        const result = plainText.replace(/[a-zA-Z]/g, (char) =>
+          shiftCharCode(char, shift)
+        );
 
-		function decrypt() {
-			const cipherText = document.getElementById('result').textContent;
-			const shift = parseInt(document.getElementById('shift').value);
-			let result = '';
-		  
-			for (let i = 0; i < cipherText.length; i++) {
-			  let charCode = cipherText.charCodeAt(i);
-			  if (charCode >= 65 && charCode <= 90) { // uppercase letters
-				charCode = ((charCode - 65 - shift + 26*100) % 26) + 65;
-			  } else if (charCode >= 97 && charCode <= 122) { // lowercase letters
-				charCode = ((charCode - 97 - shift + 26*100) % 26) + 97;
-			  }
-			  result += String.fromCharCode(charCode);
-			}
-		  
-			document.getElementById('plain-text').value = result;
-			document.getElementById('result').textContent = result;
-		}
-		  
-	</script>
-</body>
+        document.getElementById("result").textContent = result;
+      }
+
+      function decrypt() {
+        const cipherText = document.getElementById("result").textContent;
+        const shift = parseInt(document.getElementById("shift").value);
+
+        const result = cipherText.replace(/[a-zA-Z]/g, (char) =>
+          shiftCharCode(char, -shift)
+        );
+
+        document.getElementById("plain-text").value = result;
+        document.getElementById("result").textContent = result;
+      }
+    </script>
+  </body>
 </html>
