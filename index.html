@@ -17,17 +17,25 @@
         <input type="text" id="plain-text" />
 
         <label for="shift">Shift / Key</label>
-        <input type="number" id="shift" placeholder="Hanya masukkan angka" />
+        <input
+          type="number"
+          id="shift"
+          placeholder="Hanya masukkan angka atau gunakan counter di kanan"
+        />
         <br />
         <button onclick="encrypt()">Encrypt</button>
         <button onclick="decrypt()">Decrypt</button>
         <button onclick="reset()" id="reset">Reset</button>
 
+        <label for="result">Hasil</label>
         <div class="result" id="result"></div>
       </div>
     </div>
 
-    <footer>&copy Kelompok 2. All Right Reserved - KRIPTOGRAFI</footer>
+    <footer>
+      <h4>&copy Kelompok 2. All Right Reserved</h4>
+      <p>MATA KULIAH KRIPTOGRAFI</p>
+    </footer>
 
     <script src="script.js"></script>
   </body>
