@@ -8,11 +8,16 @@ body {
   padding: 0;
 }
 
+#shift {
+  text-align: center;
+}
+
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
   text-align: center;
+  z-index: -1;
 }
 
 footer h4,
@@ -125,4 +130,14 @@ button:active {
   width: 512px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background-color: #f8fbfe;
+}
+
+@media (max-width: 800px) {
+  .kotak h1 {
+    font-size: 20px;
+  }
+
+  .kotak {
+    width: 312px;
+  }
 }
