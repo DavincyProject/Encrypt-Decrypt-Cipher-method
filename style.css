@@ -132,6 +132,18 @@ button:active {
   background-color: #f8fbfe;
 }
 
+.fixed-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  border-radius: 150px;
+}
+
+img {
+  width: 40px;
+}
+
 @media (max-width: 800px) {
   .kotak h1 {
     font-size: 20px;

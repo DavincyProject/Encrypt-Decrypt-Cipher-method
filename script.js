@@ -40,3 +40,11 @@ function reset() {
     document.getElementById("shift").value = "";
     document.getElementById("plain-text").value = "";
 }
+
+document.getElementById('myButton').addEventListener('click', function() {
+    Swal.fire({
+      title: 'Encrypt-Decrypt-Cipher (EDC)',
+      text: 'Encrypt-Decrypt-Cipher (EDC) adalah metode yang digunakan untuk mengamankan data dengan mengenkripsi pesan menggunakan kunci rahasia, sehingga hanya pihak yang memiliki kunci rahasia yang dapat membaca pesan yang dikirimkan. Metode EDC biasanya digunakan dalam komunikasi melalui jaringan, seperti email, pesan instan, dan transfer file, untuk memastikan keamanan data.'
+    });
+  });
+  
