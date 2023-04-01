@@ -78,7 +78,7 @@ input {
   box-shadow: 0 0 0 5px #3b83f65f;
 }
 
-button {
+.kotak button {
   margin-top: 10px;
   margin-bottom: 10px;
   border: none;
@@ -93,7 +93,11 @@ button {
   box-shadow: 0px 5px 0px 0px black;
 }
 
-button:active {
+.kotak button:hover {
+  cursor: pointer;
+}
+
+.kotak button:active {
   transform: translateY(5px);
   box-shadow: 0px 0px 0px 0px #a29bfe;
 }
@@ -132,16 +136,17 @@ button:active {
   background-color: #f8fbfe;
 }
 
-.fixed-button {
+.faqbtn {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-  border-radius: 150px;
+  bottom: 25px;
+  right: 25px;
+  z-index: 1;
+  border: transparent;
+  color: #3b82f6;
 }
 
-img {
-  width: 40px;
+.faqbtn:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 800px) {
@@ -151,5 +156,14 @@ img {
 
   .kotak {
     width: 312px;
+  }
+
+  .faqbtn {
+    position: fixed;
+    bottom: 50px;
+    right: 25px;
+    z-index: 1;
+    border: transparent;
+    color: #3b82f6;
   }
 }

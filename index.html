@@ -5,14 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2/dist/sweetalert2.min.css">
+
+    <!-- fontawesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- sweetalert cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/sweetalert2/dist/sweetalert2.min.css"
+    />
     <title>Caesar Cipher</title>
   </head>
 
   <body>
     <div class="container">
       <div class="kotak">
-        <button id="myButton" class="fixed-button"><img src="icon/faq.png"></button>
         <h1>Caesar Cipher <br />Encrypt & Decrypt Method</h1>
 
         <label for="plain-text">Plain Text / Text Awal</label>
@@ -33,6 +46,10 @@
         <div class="result" id="result"></div>
       </div>
     </div>
+
+    <button id="myButton" class="faqbtn">
+      <i class="fa-solid fa-clipboard-question fa-lg"> FAQ</i>
+    </button>
 
     <footer>
       <h4>&copy Kelompok 2. All Right Reserved</h4>

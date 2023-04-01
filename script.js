@@ -41,10 +41,11 @@ function reset() {
     document.getElementById("plain-text").value = "";
 }
 
-document.getElementById('myButton').addEventListener('click', function() {
+document.getElementById('myButton').addEventListener('click', function () {
     Swal.fire({
-      title: 'Encrypt-Decrypt-Cipher (EDC)',
-      text: 'Encrypt-Decrypt-Cipher (EDC) adalah metode yang digunakan untuk mengamankan data dengan mengenkripsi pesan menggunakan kunci rahasia, sehingga hanya pihak yang memiliki kunci rahasia yang dapat membaca pesan yang dikirimkan. Metode EDC biasanya digunakan dalam komunikasi melalui jaringan, seperti email, pesan instan, dan transfer file, untuk memastikan keamanan data.'
+        title: '',
+        html: '<h1>Bagaimana cara kerja Caesar Cipher ?</h1>' +
+            'Caesar Cipher ini bekerja dengan menggeser abjad sesuai dengan nilai kuncinya sehingga jika terdapat abjad "A B C D E F G" kemudian digeser sejauh 2 kunci, susunan awal abjad akan berubah dari yang tadinya dimulai dengan abjad A menjadi dimulai dari abjad C sehingga menjadi seperti ini "C D E F G H I"  ' +
+            ''
     });
-  });
-  
+});
