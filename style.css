@@ -143,6 +143,7 @@ input {
   z-index: 1;
   border: transparent;
   color: #3b82f6;
+  background-color: white;
 }
 
 .faqbtn:hover {
